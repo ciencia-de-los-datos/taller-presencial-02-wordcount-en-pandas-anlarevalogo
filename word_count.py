@@ -20,11 +20,11 @@ def load_input(input_directory):
     #    datafranes.append(pd.read_csv(filename, sep="/t", header=None, names=["text"]))
 
     #List comprehension
-    datafranes = [
-        pd.read_csv(filename, sep="/t", header=None, names=["text"])
+    dataframes = [
+        pd.read_csv(filename, sep="\t", header=None, names=["text"])
         for filename in filenames
     ]
-    concatenated_df = pd.concat(datafranes, ignore_index=True)
+    concatenated_df = pd.concat(dataframes, ignore_index=True)
     return concatenated_df
 
 
